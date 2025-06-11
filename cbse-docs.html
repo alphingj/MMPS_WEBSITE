@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Documents - Mary Matha Public School</title>
+    <meta name="description" content="CBSE mandatory documents and certificates for Mary Matha Public School - Affiliation certificates, academic calendar, safety certificates and more.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-container me-3">
+                    <i class="fas fa-graduation-cap text-primary fs-2"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 text-dark fw-bold">Mary Matha</h5>
+                    <small class="text-muted">Public School</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#about">Our Story</a></li>
+                            <li><a class="dropdown-item" href="index.html#mission">Mission & Vision</a></li>
+                            <li><a class="dropdown-item" href="index.html#faculty">Faculty</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="cbse-documents.html">CBSE Documents</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#programs">Programs</a></li>
+                            <li><a class="dropdown-item" href="index.html#curriculum">Curriculum</a></li>
+                            <li><a class="dropdown-item" href="index.html#calendar">Academic Calendar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#facilities">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#admissions">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="py-5 mt-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h1 class="display-5 fw-bold text-dark mb-3">CBSE Documents</h1>
+                        <div class="section-divider mx-auto mb-4"></div>
+                        <p class="lead text-muted">
+                            As per CBSE guidelines, all mandatory documents and certificates are made available for public access and transparency.
+                        </p>
+                        <div class="alert alert-info d-inline-block">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>CBSE Affiliation No:</strong> 930845
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Search and Filter -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="form-control" id="documentSearch" placeholder="Search documents...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select" id="categoryFilter">
+                                <option value="">All Categories</option>
+                                <option value="certificates">Certificates</option>
+                                <option value="reports">Reports</option>
+                                <option value="policies">Policies</option>
+                                <option value="academic">Academic</option>
+                                <option value="safety">Safety</option>
+                                <option value="financial">Financial</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Documents Grid -->
+                    <div class="row g-4" id="documentsGrid">
+                        <!-- Affiliation Certificate -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="certificates">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-primary text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-certificate fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Prior Recognition Certificate</h5>
+                                            <small class="text-muted">Certificates</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">CBSE prior recognition certificate for the school.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 396 KB</span>
+                                        <a href="documents/cbse/Prior-Recognition-Certificate.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Academic Calendar -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="academic">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-success text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-calendar-alt fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Academic Calendar 2024</h5>
+                                            <small class="text-muted">Academic</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Academic calendar with important dates and holidays.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 260 KB</span>
+                                        <a href="documents/cbse/Academic-Calendar-2024.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Registration -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="certificates">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-warning text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-file-contract fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Trust Registration Certificate</h5>
+                                            <small class="text-muted">Certificates</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Trust registration certificate for the school management.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 280 KB</span>
+                                        <a href="documents/cbse/Trust-Reg-Certificate.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transport Fitness Certificate -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="safety">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-info text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-bus fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Transport Fitness Certificate</h5>
+                                            <small class="text-muted">Safety</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Transport vehicle fitness certificate for school buses.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 700 KB</span>
+                                        <a href="documents/cbse/Transport-Fitness-Certificate.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- School Management Committee -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="policies">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-secondary text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-users-cog fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">School Management Committee</h5>
+                                            <small class="text-muted">Policies</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">School management committee composition and details.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 508 KB</span>
+                                        <a href="documents/cbse/School-Management-Committee.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sanitary Certificate -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="safety">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-success text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-hand-sparkles fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Sanitary Certificate</h5>
+                                            <small class="text-muted">Safety</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Health and sanitary compliance certificate.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 144 KB</span>
+                                        <a href="documents/cbse/Sanitary-Certificate.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fire Safety Certificate -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="safety">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-danger text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-fire-extinguisher fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Fire Safety Certificate</h5>
+                                            <small class="text-muted">Safety</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Fire safety compliance certificate from fire department.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 374 KB</span>
+                                        <a href="documents/cbse/Fire-Safety-new.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PTA Document -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="policies">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-primary text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-handshake fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">PTA Constitution</h5>
+                                            <small class="text-muted">Policies</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Parent-Teacher Association constitution and bylaws.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 282 KB</span>
+                                        <a href="documents/cbse/PTA.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Faculty Details -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="academic">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-info text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-chalkboard-teacher fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Faculty Details</h5>
+                                            <small class="text-muted">Academic</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Complete faculty list with qualifications and experience.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 332 KB</span>
+                                        <a href="documents/cbse/Faculty-Details.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Annual Report -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="reports">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-warning text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-chart-line fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Annual Report 2022-23</h5>
+                                            <small class="text-muted">Reports</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Comprehensive annual report covering academic year 2022-23.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 850 KB</span>
+                                        <a href="documents/cbse/Annual-Report-2022-23.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Balance Sheet -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="financial">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-success text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-calculator fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Balance Sheet March 2022</h5>
+                                            <small class="text-muted">Financial</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Audited balance sheet for the financial year ending March 2022.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 289 KB</span>
+                                        <a href="documents/cbse/Balance-sheet-for-the-year-March-2022.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Land Certificate -->
+                        <div class="col-lg-4 col-md-6 document-item" data-category="certificates">
+                            <div class="card h-100 shadow-sm border-0 document-card">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <div class="document-icon bg-primary text-white rounded-3 me-3 d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-map fs-4"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">Land Certificate</h5>
+                                            <small class="text-muted">Certificates</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted mb-3">Land ownership certificate for school premises.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">PDF • 355 KB</span>
+                                        <a href="documents/cbse/land-Certificate-new.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                                            <i class="fas fa-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="noResults" class="text-center py-5" style="display: none;">
+                        <i class="fas fa-search fs-1 text-muted mb-3"></i>
+                        <h4 class="text-muted">No documents found</h4>
+                        <p class="text-muted">Try adjusting your search criteria or filter selection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="scrollTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display: none; z-index: 1050;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Document search and filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('documentSearch');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const documentItems = document.querySelectorAll('.document-item');
+            const noResults = document.getElementById('noResults');
+            const scrollTopButton = document.getElementById('scrollTop');
+
+            // Search functionality
+            function filterDocuments() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+                let visibleCount = 0;
+
+                documentItems.forEach(item => {
+                    const title = item.querySelector('.card-title').textContent.toLowerCase();
+                    const description = item.querySelector('.card-text').textContent.toLowerCase();
+                    const category = item.dataset.category;
+
+                    const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+                    const matchesCategory = !selectedCategory || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+
+            // Event listeners
+            searchInput.addEventListener('input', filterDocuments);
+            categoryFilter.addEventListener('change', filterDocuments);
+
+            // Scroll to top functionality
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollTopButton.style.display = 'block';
+                } else {
+                    scrollTopButton.style.display = 'none';
+                }
+            });
+
+            scrollTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Card hover effects
+            const documentCards = document.querySelectorAll('.document-card');
+            documentCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Loading animation
+            documentCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+
+    <style>
+        .document-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+        }
+        
+        .document-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .document-card:hover {
+            border-color: var(--bs-primary);
+        }
+        
+        .badge {
+            font-size: 0.75rem;
+        }
+        
+        .btn-outline-primary:hover {
+            transform: translateY(-1px);
+        }
+        
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--bs-primary), var(--bs-success));
+            border-radius: 2px;
+        }
+    </style>
+</body>
+</html>
