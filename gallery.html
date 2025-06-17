@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gallery - Mary Matha Public School</title>
+        <meta
+            name="description"
+            content="Photo gallery of Mary Matha Public School - Campus, facilities, activities, and school life moments."
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+
+        <style>
+            .gallery-hero {
+                background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--secondary-color)
+                );
+                color: var(--white);
+                padding: 8rem 0 4rem;
+                margin-top: 120px;
+                text-align: center;
+            }
+
+            .gallery-hero h1 {
+                font-family: var(--font-heading);
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .gallery-main {
+                padding: 4rem 0;
+                background: var(--light-gray);
+            }
+
+            .gallery-filters {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 3rem;
+                flex-wrap: wrap;
+            }
+
+            .filter-btn {
+                background: var(--white);
+                border: 2px solid var(--primary-color);
+                color: var(--primary-color);
+                padding: 0.75rem 1.5rem;
+                border-radius: var(--border-radius);
+                cursor: pointer;
+                transition: var(--transition);
+                font-weight: 500;
+            }
+
+            .filter-btn.active,
+            .filter-btn:hover {
+                background: var(--primary-color);
+                color: var(--white);
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .gallery-item {
+                position: relative;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+                cursor: pointer;
+                transition: var(--transition);
+                background: var(--white);
+                box-shadow: var(--shadow-sm);
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: var(--transition);
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.05);
+            }
+
+            .gallery-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    135deg,
+                    rgba(26, 54, 93, 0.8),
+                    rgba(44, 90, 160, 0.6)
+                );
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                opacity: 0;
+                transition: var(--transition);
+            }
+
+            .gallery-item:hover .gallery-overlay {
+                opacity: 1;
+            }
+
+            .gallery-overlay h4 {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            .gallery-overlay p {
+                font-size: 0.9rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .gallery-overlay i {
+                font-size: 2rem;
+            }
+
+            .gallery-description {
+                padding: 1.5rem;
+            }
+
+            .gallery-description h4 {
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+            }
+
+            .gallery-description p {
+                color: var(--gray);
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+            @media (max-width: 768px) {
+                .gallery-hero {
+                    padding: 6rem 0 3rem;
+                    margin-top: 80px;
+                }
+
+                .gallery-hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .gallery-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="container">
+                    <div class="top-bar-content">
+                        <div class="contact-info">
+                            <span><i class="fas fa-phone"></i> 9072863580</span>
+                            <span
+                                ><i class="fas fa-envelope"></i>
+                                mmpublicschool@gmail.com</span
+                            >
+                            <span
+                                ><i class="fas fa-map-marker-alt"></i>
+                                Kadaplamattom, Kottayam</span
+                            >
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/marymatha.mmps"
+                                ><i class="fab fa-facebook"></i
+                            ></a>
+                            <a href="https://www.instagram.com/marymathammps/"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                            <a
+                                href="https://www.youtube.com/@marymathapublicschoolkadap1197"
+                                ><i class="fab fa-youtube"></i
+                            ></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <div class="container">
+                    <div class="nav-content">
+                        <div class="logo">
+                            <img
+                                src="images/logo.png"
+                                alt="Mary Matha Public School"
+                            />
+                            <div class="logo-text">
+                                <h1>Mary Matha Public School</h1>
+                                <p>CBSE Affiliated (930845)</p>
+                            </div>
+                        </div>
+
+                        <div class="nav-menu" id="nav-menu">
+                            <a href="index.html" class="nav-link">Home</a>
+                            <div class="dropdown">
+                                <a href="index.html#about" class="nav-link"
+                                    >About Us <i class="fas fa-chevron-down"></i
+                                ></a>
+                                <div class="dropdown-content">
+                                    <a href="index.html#principal-message"
+                                        >Vision & Mission</a
+                                    >
+                                    <a href="index.html#principal"
+                                        >Principal's Message</a
+                                    >
+                                    <a href="gallery.html">Our Campus</a>
+                                    <a href="index.html#history">Our History</a>
+                                    <a href="cbse-docs.html">CBSE Documents</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="index.html#academics" class="nav-link"
+                                    >Academics
+                                    <i class="fas fa-chevron-down"></i
+                                ></a>
+                                <div class="dropdown-content">
+                                    <a href="index.html#curriculum"
+                                        >Curriculum</a
+                                    >
+                                    <a href="cbse-docs.html">Faculty</a>
+                                    <a href="cbse-docs.html">Results</a>
+                                </div>
+                            </div>
+                            <a href="index.html#facilities" class="nav-link"
+                                >Facilities</a
+                            >
+                            <a href="index.html#admissions" class="nav-link"
+                                >Admissions</a
+                            >
+                            <a href="gallery.html" class="nav-link active"
+                                >Gallery</a
+                            >
+                            <a href="index.html#admissions" class="nav-link"
+                                >Contact</a
+                            >
+                        </div>
+
+                        <div class="nav-actions">
+                            <button
+                                class="admission-btn"
+                                onclick="location.href='index.html#admissions'"
+                            >
+                                Apply Now
+                            </button>
+                            <img
+                                src="images/mary.png"
+                                alt="Mary Logo"
+                                class="additional-logo"
+                            />
+                            <button
+                                class="mobile-menu-btn"
+                                id="mobile-menu-btn"
+                            >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Gallery Hero Section -->
+        <section class="gallery-hero">
+            <div class="container">
+                <h1>School Gallery</h1>
+                <p>
+                    Explore our beautiful campus, facilities, and vibrant school
+                    life
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallery Main Section -->
+        <section class="gallery-main">
+            <div class="container">
+                <!-- Gallery Filters -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All Photos
+                    </button>
+                    <button class="filter-btn" data-filter="campus">
+                        Campus
+                    </button>
+                    <button class="filter-btn" data-filter="facilities">
+                        Facilities
+                    </button>
+                    <button class="filter-btn" data-filter="activities">
+                        Activities
+                    </button>
+                    <button class="filter-btn" data-filter="staff">
+                        Staff
+                    </button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Main Campus -->
+                    <div class="gallery-item" data-category="campus">
+                        <img
+                            src="images/maincampus.jpg"
+                            alt="Main Campus Building"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>Main Campus</h4>
+                            <p>Our beautiful main campus building</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>Main Campus Building</h4>
+                            <p>
+                                The heart of Mary Matha Public School with
+                                modern architecture and spacious classrooms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Computer Lab -->
+                    <div class="gallery-item" data-category="facilities">
+                        <img
+                            src="images/Computer-Lab.jpg"
+                            alt="Computer Laboratory"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>Computer Lab</h4>
+                            <p>State-of-the-art computer facility</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>Computer Laboratory</h4>
+                            <p>
+                                Modern computer lab equipped with latest
+                                technology for digital learning and programming.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Composite Lab -->
+                    <div class="gallery-item" data-category="facilities">
+                        <img
+                            src="images/compositelab.jpg"
+                            alt="Composite Laboratory"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>Composite Lab</h4>
+                            <p>Multi-purpose science laboratory</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>Composite Laboratory</h4>
+                            <p>
+                                Well-equipped science lab for physics,
+                                chemistry, and biology experiments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Library -->
+                    <div class="gallery-item" data-category="facilities">
+                        <img src="images/library.jpg" alt="School Library" />
+                        <div class="gallery-overlay">
+                            <h4>Library</h4>
+                            <p>Extensive collection of books and resources</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>School Library</h4>
+                            <p>
+                                A quiet sanctuary for reading and research with
+                                thousands of books and digital resources.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Indoor Games -->
+                    <div class="gallery-item" data-category="activities">
+                        <img
+                            src="images/indoor-game.jpg"
+                            alt="Indoor Games Area"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>Indoor Games</h4>
+                            <p>Recreation and sports activities</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>Indoor Games Area</h4>
+                            <p>
+                                Dedicated space for indoor sports and
+                                recreational activities for students.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Main Ground -->
+                    <div class="gallery-item" data-category="activities">
+                        <img
+                            src="images/mmpsground.jpg"
+                            alt="School Playground"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>School Ground</h4>
+                            <p>Spacious playground for outdoor activities</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>School Playground</h4>
+                            <p>
+                                Large open ground for sports, physical
+                                education, and outdoor activities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Principal -->
+                    <div class="gallery-item" data-category="staff">
+                        <img
+                            src="images/mobyimg.png"
+                            alt="Principal Moby Mathew"
+                        />
+                        <div class="gallery-overlay">
+                            <h4>Our Principal</h4>
+                            <p>Mr. Moby Mathew</p>
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <div class="gallery-description">
+                            <h4>Principal - Moby Mathew</h4>
+                            <p>
+                                Dedicated leader committed to excellence in
+                                education and student development.
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                    
+
+                   <!-- add more gallery items from here or rearrange the existing ones ;) -->
+
+
+
+                    
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img
+                                src="images/logo.png"
+                                alt="Mary Matha Public School"
+                            />
+                            <div>
+                                <h3>Mary Matha Public School</h3>
+                                <p>Excellence in Education</p>
+                            </div>
+                        </div>
+                        <p>
+                            Committed to providing quality education that
+                            nurtures the complete development of every child.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/marymatha.mmps"
+                                ><i class="fab fa-facebook"></i
+                            ></a>
+                            <a href="https://www.instagram.com/marymathammps/"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                            <a
+                                href="https://www.youtube.com/@marymathapublicschoolkadap1197"
+                                ><i class="fab fa-youtube"></i
+                            ></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li>
+                                <a href="index.html#academics">Academics</a>
+                            </li>
+                            <li>
+                                <a href="index.html#admissions">Admissions</a>
+                            </li>
+                            <li>
+                                <a href="index.html#facilities">Facilities</a>
+                            </li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Academics</h4>
+                        <ul>
+                            <li><a href="#">CBSE Curriculum</a></li>
+                            <li><a href="#">Faculty</a></li>
+                            <li><a href="#">Results</a></li>
+                            <li><a href="#">Academic Calendar</a></li>
+                            <li><a href="#">Fee Structure</a></li>
+                            <li>
+                                <a href="cbse-docs.html"
+                                    >Mandatory Disclosure</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <div class="footer-contact">
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Kadaplamattom, Kottayam Dist. PIN 686571, Kerala
+                            </p>
+                            <p><i class="fas fa-phone"></i> 9072863580</p>
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                mmpublicschool@gmail.com
+                            </p>
+                            <p>
+                                <i class="fas fa-globe"></i>
+                                www.marymathapublicschool.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>
+                            &copy; 2024 Mary Matha Public School. All rights
+                            reserved.
+                        </p>
+                        <div class="footer-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">CBSE Affiliation: 930845</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-top" class="scroll-top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+        <!-- Modal for Gallery -->
+        <div id="gallery-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img id="modal-image" src="" alt="" />
+                <div class="modal-nav">
+                    <button class="modal-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="modal-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            // Gallery filter functionality
+            document.addEventListener("DOMContentLoaded", function () {
+                const filterBtns = document.querySelectorAll(".filter-btn");
+                const galleryItems = document.querySelectorAll(".gallery-item");
+
+                filterBtns.forEach((btn) => {
+                    btn.addEventListener("click", function () {
+                        const filter = this.getAttribute("data-filter");
+
+                        // Update active button
+                        filterBtns.forEach((b) => b.classList.remove("active"));
+                        this.classList.add("active");
+
+                        // Filter gallery items
+                        galleryItems.forEach((item) => {
+                            const category = item.getAttribute("data-category");
+                            if (filter === "all" || category === filter) {
+                                item.style.display = "block";
+                                setTimeout(() => {
+                                    item.style.opacity = "1";
+                                    item.style.transform = "scale(1)";
+                                }, 10);
+                            } else {
+                                item.style.opacity = "0";
+                                item.style.transform = "scale(0.8)";
+                                setTimeout(() => {
+                                    item.style.display = "none";
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
